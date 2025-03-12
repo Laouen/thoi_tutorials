@@ -10,12 +10,28 @@ from thoi.measures.gaussian_copula import multi_order_measures
 from thoi.measures.gaussian_copula_hot_encoded import multi_order_measures_hot_encoded
 
 def main(min_T, step_T, max_T, min_N, step_N, max_N, min_bs, step_bs, max_bs, min_order, max_order, indexing_method, use_cpu, output_path):
+    """
+    Measure the runtime of THOI toolbox for different configurations.
 
+    Parameters:
+    - min_T (int): Minimum number of samples.
+    - step_T (int): Step size for the number of samples.
+    - max_T (int): Maximum number of samples.
+    - min_N (int): Minimum number of features.
+    - step_N (int): Step size for the number of features.
+    - max_N (int): Maximum number of features.
+    - min_bs (int): Minimum batch size.
+    - step_bs (int): Step size for the batch size.
+    - max_bs (int): Maximum batch size.
+    - min_order (int): Minimum size of the n-plets.
+    - max_order (int): Maximum size of the n-plets.
+    - indexing_method (str): Indexing method to use ('hot_encoded' or 'indexes').
+    - use_cpu (bool): Flag to force using CPU instead of GPU even if GPU is available.
+    - output_path (str): Path to the output .tsv file to store the results.
+
+    Returns:
+    None
     """
-        T = number of samples
-        N = number of features
-    """
-    
     multi_order_measures_func = multi_order_measures if indexing_method == 'indexes' else multi_order_measures_hot_encoded
 
     max_T = min_T if max_T is None else max_T

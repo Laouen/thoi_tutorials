@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RunMeasureTimesJDIT {
+public class RunMeasureTimesJIDT {
 
     private static void calculateOrderOinfo(RandomSystemsGenerator.RandomSystem<Integer> system, int order) {
         List<Integer> currentCombination = new ArrayList<>();

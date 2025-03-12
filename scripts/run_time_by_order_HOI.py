@@ -9,10 +9,22 @@ from pathlib import Path
 
 def main(min_T, step_T, max_T, min_N, step_N, max_N, min_order, max_order, output_path):
     """
-        T = number of samples
-        N = number of features
-    """
+    Measure the runtime of HOI toolbox for different configurations.
 
+    Parameters:
+    - min_T (int): Minimum number of samples.
+    - step_T (int): Step size for the number of samples.
+    - max_T (int): Maximum number of samples.
+    - min_N (int): Minimum number of features.
+    - step_N (int): Step size for the number of features.
+    - max_N (int): Maximum number of features.
+    - min_order (int): Minimum size of the n-plets.
+    - max_order (int): Maximum size of the n-plets.
+    - output_path (str): Path to the output .tsv file to store the results.
+
+    Returns:
+    None
+    """
     max_T = min_T if max_T is None else max_T
     max_N = min_N if max_N is None else max_N
     max_order = min_order if max_order is None else max_order

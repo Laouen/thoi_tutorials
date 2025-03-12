@@ -11,7 +11,16 @@ import torch
 from thoi.measures.gaussian_copula import nplets_measures
 
 def main(files_dir: str, output_path: str):
+    """
+    Measure the runtime of Gaussian Copula and O-information computations for different sample sizes.
 
+    Parameters:
+    - files_dir (str): Directory containing the input CSV files with sample data.
+    - output_path (str): Path to the output CSV file to store the results.
+
+    Returns:
+    None
+    """
     # get all files
     files = glob(os.path.join(files_dir, f"nsamples-*_nvars-10.csv"))
 
