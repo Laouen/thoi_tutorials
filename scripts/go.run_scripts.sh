@@ -38,7 +38,7 @@ python run_time_by_sample_size_HOI.py \
     --output_path ../results/times/time_by_sample_size_library-hoi.tsv
 
 python run_time_by_sample_size_THOI.py \
-    --files_dir ../ /random_sample_sizes \
+    --files_dir ../data/random_sample_sizes \
     --output_path ../results/times/time_by_sample_size_library-thoi.tsv
 
 
